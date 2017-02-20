@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import './index.css';
 
+import videos from './data';
+import VideoList from './VideoList';
+
 ReactDOM.render(
-  <App />,
+  <VideoList videos={videos} />,
   document.getElementById('root')
 );
