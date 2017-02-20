@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Metas = ({ duration, views }) => (
+const Metas = ({ duration, translate, views }) => (
     <div className="video-metas">
         <div className="duration">
-            {duration} minute{duration > 1 ? 's' : ''}
+            {translate('minutes', { smart_count: duration })}
         </div>
         <div className="views">
-            {views} vue{views > 1 ? 's' : ''}
+            {translate('views', { smart_count: views })}
         </div>
     </div>
 );

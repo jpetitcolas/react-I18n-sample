@@ -27,6 +27,7 @@ body {
 
 .video-metas {
     display: flex;
+    width: 300px;
 }
 
 .video-metas .duration {
