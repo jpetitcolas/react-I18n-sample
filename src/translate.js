@@ -1,18 +1,7 @@
-import React, { PropTypes } from 'react';
+import { PropTypes } from 'react';
+import { getContext } from 'recompose';
 
-export default (BaseComponent) => {
-    const LocalizedComponent = (props, context) => (
-        <BaseComponent
-            translate={context.translate}
-            locale={context.locale}
-            {...props}
-        />
-    );
-
-    LocalizedComponent.contextTypes = {
-        translate: PropTypes.func.isRequired,
-        locale: PropTypes.string.isRequired,
-    };
-
-    return LocalizedComponent;
-};
+export default getContext({
+    translate: PropTypes.func.isRequired,
+    locale: PropTypes.string.isRequired,
+});
