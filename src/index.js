@@ -5,18 +5,13 @@ import './index.css';
 import videos from './data';
 import VideoList from './VideoList';
 
-import messages from './messages';
-import Polyglot from 'node-polyglot';
+import I18nProvider from './I18nProvider';
 
 const locale = window.localStorage.getItem('locale') || 'fr';
-const polyglot = new Polyglot({
-    locale,
-    phrases: messages[locale],
-});
-
-const translate = polyglot.t.bind(polyglot);
 
 ReactDOM.render(
-  <VideoList videos={videos} translate={translate} />,
+    <I18nProvider locale={locale}>
+        <VideoList videos={videos} />
+    </I18nProvider>,
   document.getElementById('root')
 );

@@ -1,4 +1,5 @@
 import React from 'react';
+import translate from './translate';
 
 const Metas = ({ duration, translate, views }) => (
     <div className="video-metas">
@@ -11,4 +12,4 @@ const Metas = ({ duration, translate, views }) => (
     </div>
 );
 
-export default Metas;
+export default translate(Metas);

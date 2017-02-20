@@ -1,7 +1,7 @@
 import React from 'react';
 import VideoMetas from './VideoMetas.js';
 
-export const Video = ({ metas, picture, title, translate }) => (
+export const Video = ({ metas, picture, title }) => (
     <div className="video">
         <img
             src={picture}
@@ -12,7 +12,6 @@ export const Video = ({ metas, picture, title, translate }) => (
             <VideoMetas
                 duration={metas.duration}
                 views={metas.views}
-                translate={translate}
             />
         </div>
     </div>

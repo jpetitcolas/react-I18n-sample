@@ -1,7 +1,7 @@
 import React from 'react';
 import Video from './Video';
 
-export const VideoList = ({ translate, videos }) => (
+export const VideoList = ({ videos }) => (
     <div className="videos-list">
         {videos.map(video => (
             <Video
@@ -9,7 +9,6 @@ export const VideoList = ({ translate, videos }) => (
                 title={video.title}
                 metas={video.metas}
                 picture={video.picture}
-                translate={translate}
             />
         ))}
     </div>
